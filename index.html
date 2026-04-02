@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Website Resmi Kampung Cieurih Pasir — Portal informasi pemerintahan, layanan publik, berita, dan galeri kegiatan desa.">
+    <meta name="keywords" content="Kampung Cieurih Pasir, pemerintahan desa, layanan publik, berita desa">
+    <title>Kampung Cieurih Pasir — Website Resmi</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <meta name="theme-color" content="#0D3B2E">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-spinner"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-brand">
+                <div class="nav-brand-icon">CP</div>
+                <div class="nav-brand-text">
+                    <h1>Kp. Cieurih Pasir</h1>
+                    <span>Website Resmi</span>
+                </div>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link active">Beranda</a></li>
+                <li><a href="profil.html" class="nav-link">Profil</a></li>
+                <li><a href="pemerintahan.html" class="nav-link">Pemerintahan</a></li>
+                <li><a href="layanan.html" class="nav-link">Layanan</a></li>
+                <li><a href="berita.html" class="nav-link">Berita</a></li>
+                <li><a href="galeri.html" class="nav-link">Galeri</a></li>
+                <li><a href="kontak.html" class="nav-link">Kontak</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle Menu">
+        <span></span><span></span><span></span>
+      </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <img src="assets/images/hero-desa.png" alt="Kampung Cieurih Pasir" loading="eager">
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-particles" id="heroParticles"></div>
+        <div class="hero-content">
+            <div class="hero-badge">🏡 Selamat Datang</div>
+            <h2 class="hero-title">Kampung<br><span class="highlight">Cieurih Pasir</span></h2>
+            <p class="hero-desc">Membangun kampung yang maju, sejahtera, dan berbudaya dengan semangat gotong royong dan partisipasi seluruh warga masyarakat.</p>
+            <div class="hero-actions">
+                <a href="profil.html" class="btn btn-primary">Jelajahi Kampung →</a>
+                <a href="kontak.html" class="btn btn-outline">Hubungi Kami</a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>Scroll</span>
+            <div class="hero-scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Statistics -->
+    <section class="stats" id="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card animate-on-scroll">
+                    <div class="stat-icon">👥</div>
+                    <div class="stat-number" data-target="3247">0</div>
+                    <div class="stat-label">Jumlah Penduduk</div>
+                </div>
+                <div class="stat-card animate-on-scroll animate-delay-1">
+                    <div class="stat-icon">🏠</div>
+                    <div class="stat-number" data-target="876">0</div>
+                    <div class="stat-label">Kepala Keluarga</div>
+                </div>
+                <div class="stat-card animate-on-scroll animate-delay-2">
+                    <div class="stat-icon">🗺️</div>
+                    <div class="stat-number" data-target="285" data-suffix=" Ha">0</div>
+                    <div class="stat-label">Luas Wilayah</div>
+                </div>
+                <div class="stat-card animate-on-scroll animate-delay-3">
+                    <div class="stat-icon">🏘️</div>
+                    <div class="stat-number" data-target="12">0</div>
+                    <div class="stat-label">RT / RW</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services section-padding" id="services">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="section-subtitle">Pelayanan Kami</div>
+                <h2 class="section-title">Layanan Publik</h2>
+                <p class="section-desc">Berbagai layanan administrasi yang tersedia untuk seluruh warga Kampung Cieurih Pasir</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">📄</div>
+                    <h3 class="service-title">Surat Keterangan</h3>
+                    <p class="service-desc">Pembuatan surat keterangan untuk berbagai keperluan administrasi warga.</p>
+                </div>
+                <div class="service-card animate-on-scroll animate-delay-1">
+                    <div class="service-icon">📋</div>
+                    <h3 class="service-title">Surat Domisili</h3>
+                    <p class="service-desc">Penerbitan surat keterangan domisili bagi warga yang membutuhkan.</p>
+                </div>
+                <div class="service-card animate-on-scroll animate-delay-2">
+                    <div class="service-icon">👨‍👩‍👧‍👦</div>
+                    <h3 class="service-title">Kartu Keluarga</h3>
+                    <p class="service-desc">Pengurusan pembuatan dan perubahan data Kartu Keluarga.</p>
+                </div>
+                <div class="service-card animate-on-scroll animate-delay-3">
+                    <div class="service-icon">👶</div>
+                    <h3 class="service-title">Akta Kelahiran</h3>
+                    <p class="service-desc">Pengurusan surat pengantar pembuatan Akta Kelahiran.</p>
+                </div>
+                <div class="service-card animate-on-scroll animate-delay-4">
+                    <div class="service-icon">🏪</div>
+                    <h3 class="service-title">Surat Usaha</h3>
+                    <p class="service-desc">Pembuatan surat keterangan usaha untuk pelaku UMKM.</p>
+                </div>
+                <div class="service-card animate-on-scroll animate-delay-5">
+                    <div class="service-icon">📝</div>
+                    <h3 class="service-title">Surat Kematian</h3>
+                    <p class="service-desc">Pengurusan surat keterangan kematian dan administrasi terkait.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News -->
+    <section class="news section-padding" id="news">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="section-subtitle">Info Terkini</div>
+                <h2 class="section-title">Berita & Kegiatan</h2>
+                <p class="section-desc">Informasi terbaru tentang kegiatan dan perkembangan Kampung Cieurih Pasir</p>
+            </div>
+            <div class="news-grid">
+                <div class="news-card animate-on-scroll">
+                    <div class="news-img">
+                        <span class="news-category">Kegiatan</span>
+                        <img src="assets/images/berita-gotong-royong.png" alt="Gotong Royong" loading="lazy">
+                    </div>
+                    <div class="news-body">
+                        <div class="news-date">📅 28 Maret 2026</div>
+                        <h3 class="news-title">Gotong Royong Membersihkan Lingkungan Kampung</h3>
+                        <p class="news-excerpt">Warga Kampung Cieurih Pasir melaksanakan kegiatan gotong royong membersihkan lingkungan secara serentak di seluruh wilayah RT.</p>
+                        <a href="berita-detail.html?id=1" class="news-link">Baca Selengkapnya →</a>
+                    </div>
+                </div>
+                <div class="news-card animate-on-scroll animate-delay-1">
+                    <div class="news-img">
+                        <span class="news-category">Pemerintahan</span>
+                        <img src="assets/images/berita-musyawarah.png" alt="Musyawarah Desa" loading="lazy">
+                    </div>
+                    <div class="news-body">
+                        <div class="news-date">📅 25 Maret 2026</div>
+                        <h3 class="news-title">Musyawarah Perencanaan Pembangunan Kampung</h3>
+                        <p class="news-excerpt">Musyawarah perencanaan pembangunan kampung dihadiri oleh seluruh perangkat desa, BPD, dan perwakilan warga.</p>
+                        <a href="berita-detail.html?id=2" class="news-link">Baca Selengkapnya →</a>
+                    </div>
+                </div>
+                <div class="news-card animate-on-scroll animate-delay-2">
+                    <div class="news-img">
+                        <span class="news-category">Pertanian</span>
+                        <img src="assets/images/berita-panen.png" alt="Panen Raya" loading="lazy">
+                    </div>
+                    <div class="news-body">
+                        <div class="news-date">📅 20 Maret 2026</div>
+                        <h3 class="news-title">Panen Raya Padi di Lahan Pertanian Kampung</h3>
+                        <p class="news-excerpt">Musim panen raya padi di Kampung Cieurih Pasir menghasilkan produksi yang meningkat signifikan tahun ini.</p>
+                        <a href="berita-detail.html?id=3" class="news-link">Baca Selengkapnya →</a>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align:center; margin-top: var(--space-2xl);">
+                <a href="berita.html" class="btn btn-secondary">Lihat Semua Berita →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery section-padding" id="gallery">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <div class="section-subtitle">Dokumentasi</div>
+                <h2 class="section-title">Galeri Foto</h2>
+                <p class="section-desc">Kumpulan foto kegiatan dan potensi Kampung Cieurih Pasir</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item animate-on-scroll" data-caption="Panorama Kampung Cieurih Pasir">
+                    <img src="assets/images/hero-desa.png" alt="Panorama Kampung" loading="lazy">
+                    <div class="gallery-item-overlay"><span>Panorama Kampung</span></div>
+                </div>
+                <div class="gallery-item animate-on-scroll animate-delay-1" data-caption="Kegiatan Gotong Royong">
+                    <img src="assets/images/berita-gotong-royong.png" alt="Gotong Royong" loading="lazy">
+                    <div class="gallery-item-overlay"><span>Gotong Royong</span></div>
+                </div>
+                <div class="gallery-item animate-on-scroll animate-delay-2" data-caption="Musyawarah Desa">
+                    <img src="assets/images/berita-musyawarah.png" alt="Musyawarah" loading="lazy">
+                    <div class="gallery-item-overlay"><span>Musyawarah Desa</span></div>
+                </div>
+                <div class="gallery-item animate-on-scroll animate-delay-3" data-caption="Panen Raya">
+                    <img src="assets/images/berita-panen.png" alt="Panen Raya" loading="lazy">
+                    <div class="gallery-item-overlay"><span>Panen Raya</span></div>
+                </div>
+                <div class="gallery-item animate-on-scroll animate-delay-4" data-caption="Posyandu Kesehatan">
+                    <img src="assets/images/galeri-posyandu.png" alt="Posyandu" loading="lazy">
+                    <div class="gallery-item-overlay"><span>Posyandu</span></div>
+                </div>
+                <div class="gallery-item animate-on-scroll animate-delay-5" data-caption="Kantor Pemerintahan Kampung">
+                    <img src="assets/images/kantor-desa.png" alt="Kantor Desa" loading="lazy">
+                    <div class="gallery-item-overlay"><span>Kantor Desa</span></div>
+                </div>
+            </div>
+            <div style="text-align:center; margin-top: var(--space-2xl);">
+                <a href="galeri.html" class="btn btn-outline" style="border-color: var(--accent); color: var(--accent);">Lihat Semua Foto →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="nav-brand" style="margin-bottom: var(--space-sm);">
+                        <div class="nav-brand-icon">CP</div>
+                        <div class="nav-brand-text">
+                            <h1>Kp. Cieurih Pasir</h1>
+                            <span>Website Resmi</span>
+                        </div>
+                    </div>
+                    <p>Website resmi Kampung Cieurih Pasir sebagai media informasi dan pelayanan publik bagi seluruh warga masyarakat.</p>
+                </div>
+                <div>
+                    <h4 class="footer-title">Navigasi</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="profil.html">Profil Kampung</a></li>
+                        <li><a href="pemerintahan.html">Pemerintahan</a></li>
+                        <li><a href="layanan.html">Layanan Publik</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Informasi</h4>
+                    <ul class="footer-links">
+                        <li><a href="berita.html">Berita & Kegiatan</a></li>
+                        <li><a href="galeri.html">Galeri Foto</a></li>
+                        <li><a href="kontak.html">Hubungi Kami</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Kontak</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <span class="footer-contact-icon">📍</span>
+                            <span>Kampung Cieurih Pasir, Kota Tasikmalaya, Jawa Barat, 46196, Indonesia</span>
+                        </li>
+                        <li>
+                            <span class="footer-contact-icon">📞</span>
+                            <span>(+62) 878-4518-3021</span>
+                        </li>
+                        <li>
+                            <span class="footer-contact-icon">📧</span>
+                            <span>info@kp-cipas.desa.id</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2026 Kampung Cieurih Pasir. Hak Cipta Dilindungi.</span>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Facebook">📘</a>
+                    <a href="#" aria-label="Instagram">📷</a>
+                    <a href="#" aria-label="YouTube">▶️</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-top" id="scrollTop" aria-label="Kembali ke atas">↑</button>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close">✕</button>
+        <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous">❮</button>
+        <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next">❯</button>
+        <img src="" alt="" id="lightboxImg">
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

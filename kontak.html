@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hubungi Kampung Cieurih Pasir — Informasi kontak, alamat, dan formulir pesan.">
+    <title>Kontak — Kampung Cieurih Pasir</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <meta name="theme-color" content="#0D3B2E">
+</head>
+
+<body>
+    <div class="preloader" id="preloader">
+        <div class="preloader-spinner"></div>
+    </div>
+
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-brand">
+                <div class="nav-brand-icon">CP</div>
+                <div class="nav-brand-text">
+                    <h1>Kp. Cieurih Pasir</h1><span>Website Resmi</span></div>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Beranda</a></li>
+                <li><a href="profil.html" class="nav-link">Profil</a></li>
+                <li><a href="pemerintahan.html" class="nav-link">Pemerintahan</a></li>
+                <li><a href="layanan.html" class="nav-link">Layanan</a></li>
+                <li><a href="berita.html" class="nav-link">Berita</a></li>
+                <li><a href="galeri.html" class="nav-link">Galeri</a></li>
+                <li><a href="kontak.html" class="nav-link active">Kontak</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle Menu"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <h2>Hubungi Kami</h2>
+        <div class="breadcrumb">
+            <a href="index.html">Beranda</a> <span>/</span> <span>Kontak</span>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="kontak-grid">
+                <!-- Form -->
+                <div class="kontak-form animate-on-scroll">
+                    <h3>Kirim Pesan</h3>
+                    <div class="form-message" id="formMessage"></div>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="nama">Nama Lengkap *</label>
+                            <input type="text" name="nama" id="nama" placeholder="Masukkan nama lengkap" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" name="email" id="email" placeholder="contoh@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telepon">No. Telepon</label>
+                            <input type="tel" name="telepon" id="telepon" placeholder="08xx-xxxx-xxxx">
+                        </div>
+                        <div class="form-group">
+                            <label for="subjek">Subjek</label>
+                            <select name="subjek" id="subjek">
+                <option value="">Pilih subjek</option>
+                <option value="Informasi Umum">Informasi Umum</option>
+                <option value="Layanan Administrasi">Layanan Administrasi</option>
+                <option value="Pengaduan">Pengaduan</option>
+                <option value="Saran">Saran & Masukan</option>
+                <option value="Lainnya">Lainnya</option>
+              </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="pesan">Pesan *</label>
+                            <textarea name="pesan" id="pesan" placeholder="Tulis pesan Anda di sini..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Kirim Pesan →</button>
+                    </form>
+                </div>
+
+                <!-- Info -->
+                <div class="kontak-info animate-on-scroll animate-delay-1">
+                    <h3>Informasi Kontak</h3>
+
+                    <div class="kontak-info-item">
+                        <div class="kontak-info-icon">📍</div>
+                        <div class="kontak-info-text">
+                            <h4>Alamat</h4>
+                            <p>Kampung Cieurih Pasir<br>Jawa Barat, Indonesia</p>
+                        </div>
+                    </div>
+
+                    <div class="kontak-info-item">
+                        <div class="kontak-info-icon">📞</div>
+                        <div class="kontak-info-text">
+                            <h4>Telepon</h4>
+                            <p>(022) 1234-5678</p>
+                        </div>
+                    </div>
+
+                    <div class="kontak-info-item">
+                        <div class="kontak-info-icon">📧</div>
+                        <div class="kontak-info-text">
+                            <h4>Email</h4>
+                            <p>info@kp-cipas.desa.id</p>
+                        </div>
+                    </div>
+
+                    <div class="kontak-info-item">
+                        <div class="kontak-info-icon">🕐</div>
+                        <div class="kontak-info-text">
+                            <h4>Jam Operasional</h4>
+                            <p>Senin — Jumat: 08.00 — 15.00 WIB<br>Sabtu: 08.00 — 12.00 WIB<br>Minggu & Hari Libur: Tutup</p>
+                        </div>
+                    </div>
+
+                    <div class="kontak-map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d247.30733491533337!2d108.2462552418919!3d-7.363160372784495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sid!2sid!4v1775089193008!5m2!1sid!2sid" width="600" height="450" style="border:0;"
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom" style="border:none;">
+                <span>© 2026 Kampung Cieurih Pasir. Hak Cipta Dilindungi.</span>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Facebook">📘</a>
+                    <a href="#" aria-label="Instagram">📷</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scrollTop" aria-label="Kembali ke atas">↑</button>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

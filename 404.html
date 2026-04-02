@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — Halaman Tidak Ditemukan</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <style>
+    .error-page {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-light) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .error-page::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0L60 30L30 60L0 30Z' fill='none' stroke='rgba(255,255,255,0.03)' stroke-width='1'/%3E%3C/svg%3E");
+    }
+
+    .error-content {
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      padding: var(--space-xl);
+      max-width: 600px;
+    }
+
+    .error-code {
+      font-size: 8rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+      margin-bottom: var(--space-lg);
+      animation: fadeInDown 0.8s ease both;
+    }
+
+    .error-title {
+      font-size: var(--fs-2xl);
+      font-weight: 700;
+      color: white;
+      margin-bottom: var(--space-md);
+      animation: fadeInUp 0.8s ease 0.2s both;
+    }
+
+    .error-desc {
+      font-size: var(--fs-md);
+      color: rgba(255, 255, 255, 0.65);
+      margin-bottom: var(--space-2xl);
+      line-height: 1.7;
+      animation: fadeInUp 0.8s ease 0.4s both;
+    }
+
+    .error-actions {
+      display: flex;
+      gap: var(--space-md);
+      justify-content: center;
+      flex-wrap: wrap;
+      animation: fadeInUp 0.8s ease 0.6s both;
+    }
+
+    .error-decor {
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(200, 169, 92, 0.08), transparent 70%);
+      animation: pulse-glow 4s ease-in-out infinite;
+    }
+
+    .error-decor-1 {
+      top: -100px;
+      right: -50px;
+    }
+
+    .error-decor-2 {
+      bottom: -100px;
+      left: -50px;
+      animation-delay: 2s;
+    }
+
+    @keyframes pulse-glow {
+
+      0%,
+      100% {
+        transform: scale(1);
+        opacity: 0.5;
+      }
+
+      50% {
+        transform: scale(1.2);
+        opacity: 1;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .error-code {
+        font-size: 5rem;
+      }
+
+      .error-title {
+        font-size: var(--fs-xl);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="error-page">
+    <div class="error-decor error-decor-1"></div>
+    <div class="error-decor error-decor-2"></div>
+    <div class="error-content">
+      <div class="error-code">404</div>
+      <h1 class="error-title">Halaman Tidak Ditemukan</h1>
+      <p class="error-desc">Maaf, halaman yang Anda cari tidak tersedia atau mungkin telah dipindahkan. Silakan kembali
+        ke halaman utama.</p>
+      <div class="error-actions">
+        <a href="index.html" class="btn btn-primary">← Kembali ke Beranda</a>
+        <a href="kontak.html" class="btn btn-outline">Hubungi Kami</a>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

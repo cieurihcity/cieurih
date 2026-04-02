@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Berita dan informasi terbaru dari Kampung Cieurih Pasir.">
+  <title>Detail Berita — Kampung Cieurih Pasir</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <div class="preloader" id="preloader"><div class="preloader-spinner"></div></div>
+
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-brand">
+        <div class="nav-brand-icon">CP</div>
+        <div class="nav-brand-text"><h1>Kp. Cieurih Pasir</h1><span>Website Resmi</span></div>
+      </a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="nav-link">Beranda</a></li>
+        <li><a href="profil.html" class="nav-link">Profil</a></li>
+        <li><a href="pemerintahan.html" class="nav-link">Pemerintahan</a></li>
+        <li><a href="layanan.html" class="nav-link">Layanan</a></li>
+        <li><a href="berita.html" class="nav-link active">Berita</a></li>
+        <li><a href="galeri.html" class="nav-link">Galeri</a></li>
+        <li><a href="kontak.html" class="nav-link">Kontak</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <section class="page-header">
+    <h2>Detail Berita</h2>
+    <div class="breadcrumb">
+      <a href="index.html">Beranda</a> <span>/</span> <a href="berita.html">Berita</a> <span>/</span> <span id="breadcrumbTitle">Detail</span>
+    </div>
+  </section>
+
+  <section class="section-padding">
+    <div class="container">
+      <div class="berita-detail-grid">
+        <!-- Main Content -->
+        <article class="berita-detail-main animate-on-scroll" id="beritaContent">
+          <div class="berita-detail-loading" id="beritaLoading">
+            <div class="preloader-spinner" style="width:36px;height:36px;margin:40px auto;"></div>
+            <p style="text-align:center;color:var(--text-secondary);">Memuat berita...</p>
+          </div>
+        </article>
+
+        <!-- Sidebar -->
+        <aside class="berita-detail-sidebar animate-on-scroll animate-delay-1">
+          <div class="sidebar-widget">
+            <h4 class="sidebar-widget-title">Berita Lainnya</h4>
+            <div id="relatedNews">
+              <div class="preloader-spinner" style="width:24px;height:24px;margin:20px auto;"></div>
+            </div>
+          </div>
+
+          <div class="sidebar-widget">
+            <h4 class="sidebar-widget-title">Kategori</h4>
+            <div class="sidebar-categories" id="sidebarCategories">
+              <a href="berita.html" class="sidebar-category-tag">Semua</a>
+              <a href="berita.html#kegiatan" class="sidebar-category-tag">Kegiatan</a>
+              <a href="berita.html#pemerintahan" class="sidebar-category-tag">Pemerintahan</a>
+              <a href="berita.html#pertanian" class="sidebar-category-tag">Pertanian</a>
+              <a href="berita.html#kesehatan" class="sidebar-category-tag">Kesehatan</a>
+              <a href="berita.html#budaya" class="sidebar-category-tag">Budaya</a>
+            </div>
+          </div>
+
+          <div class="sidebar-widget sidebar-cta">
+            <h4>Hubungi Kami</h4>
+            <p>Ada pertanyaan? Hubungi Kantor Kampung</p>
+            <a href="kontak.html" class="btn btn-primary" style="width:100%;justify-content:center;padding:12px 20px;">Kirim Pesan →</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom" style="border:none;">
+        <span>© 2026 Kampung Cieurih Pasir. Hak Cipta Dilindungi.</span>
+        <div class="footer-socials">
+          <a href="#" aria-label="Facebook">📘</a>
+          <a href="#" aria-label="Instagram">📷</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Kembali ke atas">↑</button>
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      const params = new URLSearchParams(window.location.search);
+      const beritaId = params.get('id');
+      const contentEl = document.getElementById('beritaContent');
+      const breadcrumbTitle = document.getElementById('breadcrumbTitle');
+
+      if (!beritaId) {
+        contentEl.innerHTML = `
+          <div class="berita-detail-empty">
+            <div style="font-size:3rem;margin-bottom:var(--space-lg);">📰</div>
+            <h3>Berita Tidak Ditemukan</h3>
+            <p>Berita yang Anda cari tidak tersedia.</p>
+            <a href="berita.html" class="btn btn-primary" style="margin-top:var(--space-lg);">← Kembali ke Berita</a>
+          </div>`;
+        return;
+      }
+
+      try {
+        // Load article
+        const res = await fetch(`/api/berita/${beritaId}`);
+        const berita = await res.json();
+
+        if (!berita || !berita.judul) {
+          contentEl.innerHTML = `
+            <div class="berita-detail-empty">
+              <div style="font-size:3rem;margin-bottom:var(--space-lg);">📰</div>
+              <h3>Berita Tidak Ditemukan</h3>
+              <p>Berita yang Anda cari tidak tersedia.</p>
+              <a href="berita.html" class="btn btn-primary" style="margin-top:var(--space-lg);">← Kembali ke Berita</a>
+            </div>`;
+          return;
+        }
+
+        document.title = `${berita.judul} — Kampung Cieurih Pasir`;
+        breadcrumbTitle.textContent = berita.judul.length > 40 ? berita.judul.substring(0, 40) + '...' : berita.judul;
+
+        const tanggal = berita.tanggal ? new Date(berita.tanggal).toLocaleDateString('id-ID', {
+          weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
+        }) : '';
+
+        contentEl.innerHTML = `
+          ${berita.gambar ? `<div class="berita-detail-image"><img src="${berita.gambar}" alt="${berita.judul}" loading="eager"></div>` : ''}
+          <div class="berita-detail-meta">
+            ${berita.kategori_nama ? `<span class="berita-detail-category">${berita.kategori_nama}</span>` : ''}
+            <span class="berita-detail-date">📅 ${tanggal}</span>
+          </div>
+          <h2 class="berita-detail-title">${berita.judul}</h2>
+          <div class="berita-detail-body">
+            ${berita.konten ? berita.konten.split('\n').map(p => `<p>${p}</p>`).join('') : '<p>Konten tidak tersedia.</p>'}
+          </div>
+          <div class="berita-detail-share">
+            <span>Bagikan:</span>
+            <div class="share-buttons">
+              <a href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}" target="_blank" rel="noopener" class="share-btn share-fb" aria-label="Share Facebook">📘 Facebook</a>
+              <a href="https://twitter.com/intent/tweet?url=${encodeURIComponent(window.location.href)}&text=${encodeURIComponent(berita.judul)}" target="_blank" rel="noopener" class="share-btn share-tw" aria-label="Share Twitter">🐦 Twitter</a>
+              <a href="https://api.whatsapp.com/send?text=${encodeURIComponent(berita.judul + ' ' + window.location.href)}" target="_blank" rel="noopener" class="share-btn share-wa" aria-label="Share WhatsApp">💬 WhatsApp</a>
+            </div>
+          </div>
+          <div class="berita-detail-nav">
+            <a href="berita.html" class="btn btn-secondary" style="padding:10px 24px;">← Kembali ke Berita</a>
+          </div>
+        `;
+
+        // Load related news
+        const allRes = await fetch('/api/berita');
+        const allBerita = await allRes.json();
+        const related = allBerita.filter(b => b.id !== parseInt(beritaId)).slice(0, 4);
+        const relatedEl = document.getElementById('relatedNews');
+
+        if (related.length > 0) {
+          relatedEl.innerHTML = related.map(b => `
+            <a href="berita-detail.html?id=${b.id}" class="sidebar-news-item">
+              ${b.gambar ? `<img src="${b.gambar}" alt="${b.judul}" loading="lazy">` : ''}
+              <div class="sidebar-news-info">
+                <h5>${b.judul}</h5>
+                <span>${b.tanggal ? new Date(b.tanggal).toLocaleDateString('id-ID') : ''}</span>
+              </div>
+            </a>
+          `).join('');
+        } else {
+          relatedEl.innerHTML = '<p style="color:var(--text-secondary);font-size:var(--fs-sm);">Belum ada berita lainnya.</p>';
+        }
+
+      } catch (err) {
+        contentEl.innerHTML = `
+          <div class="berita-detail-empty">
+            <div style="font-size:3rem;margin-bottom:var(--space-lg);">⚠️</div>
+            <h3>Terjadi Kesalahan</h3>
+            <p>Gagal memuat berita. Pastikan server berjalan.</p>
+            <a href="berita.html" class="btn btn-primary" style="margin-top:var(--space-lg);">← Kembali ke Berita</a>
+          </div>`;
+      }
+    });
+  </script>
+</body>
+</html>

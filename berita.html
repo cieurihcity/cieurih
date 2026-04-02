@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Berita dan kegiatan terbaru Kampung Cieurih Pasir.">
+  <title>Berita — Kampung Cieurih Pasir</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#0D3B2E">
+</head>
+<body>
+  <div class="preloader" id="preloader"><div class="preloader-spinner"></div></div>
+
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-brand">
+        <div class="nav-brand-icon">CP</div>
+        <div class="nav-brand-text"><h1>Kp. Cieurih Pasir</h1><span>Website Resmi</span></div>
+      </a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="nav-link">Beranda</a></li>
+        <li><a href="profil.html" class="nav-link">Profil</a></li>
+        <li><a href="pemerintahan.html" class="nav-link">Pemerintahan</a></li>
+        <li><a href="layanan.html" class="nav-link">Layanan</a></li>
+        <li><a href="berita.html" class="nav-link active">Berita</a></li>
+        <li><a href="galeri.html" class="nav-link">Galeri</a></li>
+        <li><a href="kontak.html" class="nav-link">Kontak</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <section class="page-header">
+    <h2>Berita & Kegiatan</h2>
+    <div class="breadcrumb">
+      <a href="index.html">Beranda</a> <span>/</span> <span>Berita</span>
+    </div>
+  </section>
+
+  <section class="section-padding">
+    <div class="container">
+      <!-- Filter -->
+      <div class="filter-bar animate-on-scroll">
+        <button class="filter-btn active" data-filter="semua">Semua</button>
+        <button class="filter-btn" data-filter="kegiatan">Kegiatan</button>
+        <button class="filter-btn" data-filter="pemerintahan">Pemerintahan</button>
+        <button class="filter-btn" data-filter="pertanian">Pertanian</button>
+        <button class="filter-btn" data-filter="kesehatan">Kesehatan</button>
+        <button class="filter-btn" data-filter="budaya">Budaya</button>
+      </div>
+
+      <div class="news-grid">
+        <div class="news-card animate-on-scroll" data-category="kegiatan">
+          <div class="news-img">
+            <span class="news-category">Kegiatan</span>
+            <img src="assets/images/berita-gotong-royong.png" alt="Gotong Royong" loading="lazy">
+          </div>
+          <div class="news-body">
+            <div class="news-date">📅 28 Maret 2026</div>
+            <h3 class="news-title">Gotong Royong Membersihkan Lingkungan Kampung</h3>
+            <p class="news-excerpt">Warga Kampung Cieurih Pasir melaksanakan kegiatan gotong royong membersihkan lingkungan secara serentak di seluruh wilayah RT. Kegiatan ini diikuti oleh ratusan warga dari berbagai kalangan usia.</p>
+            <a href="berita-detail.html?id=1" class="news-link">Baca Selengkapnya →</a>
+          </div>
+        </div>
+
+        <div class="news-card animate-on-scroll animate-delay-1" data-category="pemerintahan">
+          <div class="news-img">
+            <span class="news-category">Pemerintahan</span>
+            <img src="assets/images/berita-musyawarah.png" alt="Musyawarah" loading="lazy">
+          </div>
+          <div class="news-body">
+            <div class="news-date">📅 25 Maret 2026</div>
+            <h3 class="news-title">Musyawarah Perencanaan Pembangunan Kampung</h3>
+            <p class="news-excerpt">Musyawarah perencanaan pembangunan kampung dihadiri oleh seluruh perangkat desa, BPD, dan perwakilan warga untuk membahas rencana pembangunan tahun anggaran 2026-2027.</p>
+            <a href="berita-detail.html?id=2" class="news-link">Baca Selengkapnya →</a>
+          </div>
+        </div>
+
+        <div class="news-card animate-on-scroll animate-delay-2" data-category="pertanian">
+          <div class="news-img">
+            <span class="news-category">Pertanian</span>
+            <img src="assets/images/berita-panen.png" alt="Panen Raya" loading="lazy">
+          </div>
+          <div class="news-body">
+            <div class="news-date">📅 20 Maret 2026</div>
+            <h3 class="news-title">Panen Raya Padi di Lahan Pertanian Kampung</h3>
+            <p class="news-excerpt">Musim panen raya padi di Kampung Cieurih Pasir menghasilkan produksi yang meningkat signifikan dibandingkan tahun lalu berkat program intensifikasi pertanian.</p>
+            <a href="berita-detail.html?id=3" class="news-link">Baca Selengkapnya →</a>
+          </div>
+        </div>
+
+        <div class="news-card animate-on-scroll" data-category="kesehatan">
+          <div class="news-img">
+            <span class="news-category">Kesehatan</span>
+            <img src="assets/images/galeri-posyandu.png" alt="Posyandu" loading="lazy">
+          </div>
+          <div class="news-body">
+            <div class="news-date">📅 15 Maret 2026</div>
+            <h3 class="news-title">Pelaksanaan Posyandu Rutin Bulan Maret</h3>
+            <p class="news-excerpt">Kegiatan Posyandu rutin melayani pemeriksaan kesehatan balita, ibu hamil, dan lansia. Tercatat 85 balita dan 30 ibu hamil yang hadir pada kegiatan bulan ini.</p>
+            <a href="berita-detail.html?id=4" class="news-link">Baca Selengkapnya →</a>
+          </div>
+        </div>
+
+        <div class="news-card animate-on-scroll animate-delay-1" data-category="budaya">
+          <div class="news-img">
+            <span class="news-category">Budaya</span>
+            <img src="assets/images/galeri-upacara.png" alt="Upacara Adat" loading="lazy">
+          </div>
+          <div class="news-body">
+            <div class="news-date">📅 10 Maret 2026</div>
+            <h3 class="news-title">Peringatan Hari Jadi Kampung Cieurih Pasir</h3>
+            <p class="news-excerpt">Peringatan hari jadi kampung dimeriahkan dengan penampilan kesenian tradisional Sunda, perlombaan antar RT, dan acara syukuran bersama seluruh warga.</p>
+            <a href="berita-detail.html?id=5" class="news-link">Baca Selengkapnya →</a>
+          </div>
+        </div>
+
+        <div class="news-card animate-on-scroll animate-delay-2" data-category="kegiatan">
+          <div class="news-img">
+            <span class="news-category">Kegiatan</span>
+            <img src="assets/images/galeri-infrastruktur.png" alt="Infrastruktur" loading="lazy">
+          </div>
+          <div class="news-body">
+            <div class="news-date">📅 5 Maret 2026</div>
+            <h3 class="news-title">Pembangunan Jalan Kampung Ruas Cieurih — Pasir</h3>
+            <p class="news-excerpt">Proyek pembangunan jalan kampung sepanjang 500 meter telah selesai dikerjakan. Jalan baru ini menghubungkan dusun Cieurih dan Pasir dengan akses yang lebih baik.</p>
+            <a href="berita-detail.html?id=6" class="news-link">Baca Selengkapnya →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom" style="border:none;">
+        <span>© 2026 Kampung Cieurih Pasir. Hak Cipta Dilindungi.</span>
+        <div class="footer-socials">
+          <a href="#" aria-label="Facebook">📘</a>
+          <a href="#" aria-label="Instagram">📷</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Kembali ke atas">↑</button>
+  <script src="js/main.js"></script>
+</body>
+</html>

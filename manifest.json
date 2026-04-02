@@ -1,0 +1,16 @@
+{
+  "name": "Kampung Cieurih Pasir",
+  "short_name": "Kp. Cipas",
+  "description": "Website Resmi Kampung Cieurih Pasir — Portal informasi pemerintahan, layanan publik, berita, dan galeri kegiatan desa.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#0D3B2E",
+  "theme_color": "#0D3B2E",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
